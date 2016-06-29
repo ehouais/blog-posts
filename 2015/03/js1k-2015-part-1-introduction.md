@@ -1,46 +1,61 @@
-# js1k 2015 (part 1) : introduction
+# JS1k 2015 (part 1) : introduction
 
-<section>
+<div class="demo">
+
+[Islands](http://js1k.com/2324 "Islands")
+
 <iframe class="demo" src="//rawgit.com/ehouais/js1k/gh-pages/shim.html?demo=2015-Islands"></iframe>
+(click to focus + arrow keys/PgUp/PgDown to explore)
 
-Islands (click to focus + arrow keys/PgUp/PgDown to explore)
-</section>
+</div>
 
 <section>
-<img class="thumb" title="Buggy island" src="http://ehouais.net/blog/wp-content/uploads/2015/03/buggy1.png" alt="Buggy island" />
+
+![Buggy island](http://ehouais.net/blog/wp-content/uploads/2015/03/buggy1.png "Buggy island")
 
 Though the final version of [my js1k 2014 entry](http://js1k.com/1966 "Buggy Island") wasn't a potential winner with its visual glitches and poor frame rate, I had put some hard work into it, and had a lot of (mainly mathematical) fun exploring recursive data structures and optimizing graph traversal algorithms. I felt this research area was a great mathematical and artistical playground, especially in the context of constrained creative coding such as js1k, so I decided to continue on the same path to publish [something really satisfactory](http://js1k.com/2015-hypetrain/demo/2324 "Islands") for the 2015 edition.
+
 </section>
 
 <section>
-<img class="thumb" title="Strange crystals" src="http://ehouais.net/blog/wp-content/uploads/2013/05/crystals.png" alt="Strange crystals" />
 
-[My 2013 entry](http://js1k.com/2013-spring/demo/1555 "Strange crystals") proved that a few thousands well used coloured rectangles can bring a satisfactory pseudo-realistic visual experience. Canvas' fillRect is fast enough for the job, as long as it is backed by a powerful engine to keep the rendering loop is as simple as possible. The "Strange Crystals" demo used this technique in conjunction with old-school 2.5D techniques to simulate a first-person mine cart ride. The data structure was directly bound to the z-index and made the rendering loop dead simple, letting room to enhance the visual evocation with stalactites, lightbulbs and other goodies.
+![Strange crystals](http://ehouais.net/blog/wp-content/uploads/2013/05/crystals.png "Strange crystals")
+
+[My 2013 entry](http://js1k.com/2013-spring/demo/1555 "Strange crystals") proved that a few thousands well used coloured rectangles can bring a satisfactory pseudo-realistic visual experience. Canvas' `fillRect` is fast enough for the job, as long as it is backed by a powerful engine to keep the rendering loop is as simple as possible. The "Strange Crystals" demo used this technique in conjunction with old-school 2.5D techniques to simulate a first-person mine cart ride. The data structure was directly bound to the z-index and made the rendering loop dead simple, letting room to enhance the visual evocation with stalactites, lightbulbs and other goodies.
+
 </section>
 
 <section>
-<img class="thumb" title="Pin art" src="http://ehouais.net/blog/wp-content/uploads/2015/03/pinart.jpg" alt="Pin art" />
+
+![Pin art](http://ehouais.net/blog/wp-content/uploads/2015/03/pinart.jpg "Pin art")
 
 In 2014, I decided to go 3D by adapting the rectangle-based rendering technique to a heightmap. The idea was, given a terrain (altitude = f(x,y)), to tile the surface of the terrain, give each tile the height corresponding to the terrain's altitude at the center of the tile, and render the tiles with vertical rectangles to produce an approximate view of the terrain. When the tiles' width become smaller, the rendering gets more accurate and hopefully realistic. [Pin art](https://en.wikipedia.org/wiki/Pin_Art "Pin Art") frames are a good real-world equivalent to this rendering technique.
+
 </section>
 
 <section>
-<img class="thumb" title="3D projection" src="http://ehouais.net/blog/wp-content/uploads/2015/03/projection.png" alt="3D projection" />
+
+![3D projection](http://ehouais.net/blog/wp-content/uploads/2015/03/projection.png "3D projection")
 
 The 3D rendering process must be able to perform standard tasks:
 - View frustum : only the tiles that are in the <a title="View frustum" href="https://en.wikipedia.org/wiki/Viewing_frustum">view frustum</a> need to be rendered.
 - Perspective: given a point of view, apply <a title="3D projection" href="https://en.wikipedia.org/wiki/3D_projection">perspective calculations</a> when mapping the terrain coordinates to the canvas coordinates.
 - Z-index: the distance between the tile and the viewer must be taken into account so that [distant tiles do not overlap closer tiles](https://en.wikipedia.org/wiki/Hidden_surface_determination "Hidden surface determination").
+
 </section>
 
 <section>
-<img class="thumb" title="Bonus" src="http://ehouais.net/blog/wp-content/uploads/2015/03/bonus.png" alt="Bonus" />
+
+![Bonus](http://ehouais.net/blog/wp-content/uploads/2015/03/bonus.png "Bonus")
 
 Bonus features include:
 - Variable <a title="Level of detail" href="https://en.wikipedia.org/wiki/Level_of_detail">level of detail (LOD)</a>: since distant zones don't need same rendering accuracy as closer zones, the rendering algo can profit from a multi-level tiling data structure.
 - Memory efficiency: if some zones need less detail, the same layered data structure can help store sparse data in a more efficient way.
+
 </section>
 
 <section>
-In the next post, I'll present the 2014 implementation of these principles, with its mathematical goodness and its inherent flaw.
+
+In [the next post](../04/js1k-2015-part-2-buggy-island "Buggy Island") , I'll present the 2014 implementation of these principles, with its mathematical goodness and its inherent flaw.
+
 </section>
