@@ -12,60 +12,130 @@
             body {
                 font-family: gotham;
                 font-size: 14px;
+                background-color: #f0f7ff;
             }
-            h1 {
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                text-decoration: none;
+                color: #08e;
+            }
+            a[href]:hover {
+                text-decoration: underline;
+            }
+            code {
+                font-size: 13px;
+                background-color: #fed;
+            }
+            #navigation  {
+                position: fixed;
+                top: 10px;
+                width: 330px;
+                text-align: right;
+                padding: 10px;
+            }
+            #navigation a {
+                display: block;
+            }
+            #navigation a:not([href]) {
+                color: #000;
+            }
+            #navigation section {
+                margin-top: 20px;
+            }
+            #content {
+                background-color: #fff;
+                width: 500px;
+                margin-left: 350px;
+                margin-top: 10px;
+                padding: 30px;
+                box-shadow: 0 0 6px 0 #aaa;
+            }
+            #content h1 {
                 text-align: center;
-                margin-top: 30px;
-                margin-bottom: 50px;
-            }
-            section {
-                position: relative;
                 margin-bottom: 40px;
+            }
+            #content .demo {
+                text-align: center;
+                margin: 40px auto;
+            }
+            #content section {
+                position: relative;
+                margin-bottom: 30px;
                 text-align: justify;
             }
-            section >p {
+            #content section >p {
                 text-indent: 1em;
             }
-            .thumb {
+            #content img {
                 position: absolute;
-                width: 100px;
-                height: 100px;
-                right: -120px;
+                max-height: 100px;
+                left: 550px;
             }
-            iframe.demo {
+            #content iframe.demo {
                 border: 1px solid #ddd;
                 display: block;
                 margin: auto;
                 width: 400px;
                 height: 200px;
             }
-            #content {
-                width: 600px;
-                margin: auto;
-            }
         </style>
     </head>
     <body>
-        <div id="header"></div>
+        <div id="navigation">
+            <a href="/home">home</a>
+            <section>
+                <a href="/2016/07/js1k-2016">JS1k 2016</a>
+                <a href="/2015/04/js1k-2015-part-2-buggy-island">JS1k 2015 (part 2) : Buggy island</a>
+                <a href="/2015/03/js1k-2015-part-1-introduction">JS1k 2015 (part 1) : Introduction</a>
+                <a href="/2013/05/js1k-2013-part-4-conclusion">JS1k 2013 (part 4) : Conclusion</a>
+                <a href="/2013/04/js1k-2013-part-3-rendering">JS1k 2013 (part 3) : Rendering</a>
+                <a href="/2013/04/js1k-2013-part-2-tunnel-generation">JS1k 2013 (part 2) : Tunnel generation</a>
+                <a href="/2013/04/js1k-2013-part-1-introduction">JS1k 2013 (part 1) : Introduction</a>
+                <a href="/2012/03/js1k-2012-part-4-optimization-and-conclusion">JS1k 2012 (part 4) : Optimization & conclusion</a>
+                <a href="/2012/03/js1k-2012-part-3-time-colours-and-light">JS1k 2012 (part 3) : Time, colours & light</a>
+                <a href="/2012/03/js1k-2012-part-2-terrain-generation">JS1k 2012 (part 2) : Terrain generation</a>
+                <a href="/2012/03/js1k-2012-part-1-introduction">JS1k 2012 (part 1) : Introduction</a>
+            </section>
+        </div>
         <div id="content"></div>
-        <div id="navigation"></div>
         <script>
-            var url = window.location.href,
-                match = url.match(/(.*)\/(\d{4}\/\d{2}\/.*)/);
-                http = function(uri, cb) {
+            var http = function(uri, cb) {
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState === 4) {
-                            cb(xhr.responseText);
+                            cb(xhr);
                         }
                     }
                     xhr.open('GET', uri, true);
                     xhr.send();
-                }
+                },
+                url = (function() {
+                    var a = document.createElement('a');
 
-            http((match ? match[1]+'/posts/'+match[2] : url)+'.md', function(res) {
-                document.getElementById('content').innerHTML = markdownit({html: true}).render(res);
-            });
+                    a.href = window.location.href;
+
+                    return {
+                        protocol: a.protocol,
+                        host: a.host,
+                        path: a.pathname,
+                    };
+                })(),
+                load = function(path) {
+                    http(url.protocol+'//'+url.host+'/posts'+path+'.md', function(xhr) {
+                        if (xhr.status == 200) {
+                            var link = document.querySelector('#navigation a[href="'+path+'"]');
+                            link && link.removeAttribute('href');
+                            document.getElementById('content').innerHTML = markdownit({html: true}).render(xhr.responseText);
+                        } else {
+                            window.location.replace(url.protocol+'//'+url.host+'/home');
+                        }
+                    });
+                };
+
+            load(url.path);
         </script>
     </body>
 </html>
