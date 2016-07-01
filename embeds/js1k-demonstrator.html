@@ -14,22 +14,32 @@
             html, body {
                 margin: 0;
                 padding: 0;
+                overflow: hidden;
             }
-            #thumbs {
+            #hint {
                 text-align: center;
             }
+            #thumbs {
+                float: left;
+            }
+            #thumbs a {
+                display: block;
+                margin-bottom: 4px;
+                margin-right: 4px;
+            }
             #thumbs img {
-                width: 96px;
+                width: 80px;
             }
             #demo {
-                width: 490px;
-                height: 490px;
-                display: block;
-                margin: auto;
+                width: 414px;
+                height: 414px;
                 border: 1px solid #ddd;
             }
             .info {
                 display: none;
+            }
+            .info h3 img {
+                width: 40px;
             }
             .demo .placeholder, .demo iframe {
                 float: left;
@@ -48,71 +58,96 @@
             h3 img {
                 vertical-align: -70%;
             }
+            .control {
+                background-color: #777;
+                color: #fff;
+                padding: 0px 3px;
+                border-radius: 6px;
+                margin-right: 2px;
+            }
         </style>
     </head>
     <body>
+        <div id="hint">Click on a thumbnail to load the corresponding demo</div>
         <div id="thumbs">
-            <a href="#2012-Mine[love]craft"><img src="" title="JS1k 2012: Mine[love]craft" /></a>
-            <a href="#2013-Strange_crystals_II"><img src="" title="JS1k 2013: Strange crystals II" /></a>
-            <a href="#2014-Buggy_island"><img src="" title="JS1k 2014: Buggy island" /></a>
-            <a href="#2015-Islands"><img src="" title="JS1k 2015: Islands" /></a>
-            <a href="#2016-Gliese_581_c"><img src="" title="JS1k 2016: Gliese 581 c" /></a>
+            <a href="#2012-Mine[love]craft"><img src="#" title="JS1k 2012: Mine[love]craft" /></a>
+            <a href="#2013-Strange_crystals_II"><img src="#" title="JS1k 2013: Strange crystals II" /></a>
+            <a href="#2014-Buggy_island"><img src="#" title="JS1k 2014: Buggy island" /></a>
+            <a href="#2015-Islands"><img src="#" title="JS1k 2015: Islands" /></a>
+            <a href="#2016-Gliese_581_c"><img src="#" title="JS1k 2016: Gliese 581 c" /></a>
         </div>
         <iframe id="demo"></iframe>
         <div>
-            <div id="2016-Gliese_581_c" class="info">
-                <div class="version"><img src="http://js1k.com/2016-elemental/img/js1k-elemental.png" style="width: 40px; background-color: #fff"/>2016</div>
-                <div class="name">Gliese 581 c</div>
-                <div class="size">1019 bytes</div>
-                <div class="description"></div>
-                <div class="techniques">Inverse-distance weighting based terrain generation + heightmap interpolation and raycasting</div>
-                <div class="controls"><span class="label label-default">Click</span> resume/pause, <span class="label label-default">&#8592;</span><span class="label label-default">&#8594;</span> explore</div>
-                <div class="rank"></div>
-                <div class="bugs"></div>
-                <a href="//github.com/ehouais/js1k/blob/master/2016-Gliese_581_c/plain.js">Source code on GitHub</a><br/>
-                <a href="http://js1k.com/2016-elemental/demo/2604">Entry on JS1K</a><br/>
-            </div>
-            <div id="2015-Islands" class="info">
-                <h3 class="panel-title" style="display: inline; margin-right: 20px"><img src="http://js1k.com/2015-hypetrain/img/js1k-hypetrain.png" style="width: 40px; background-color: #fff"/>2015 - Islands - 1018 bytes</h3>
-                <p>Quadtree-based procedural 3D island generation</p>
-                <p><span class="label label-default">&#8592;</span><span class="label label-default">&#8593;</span><span class="label label-default">&#8595;</span><span class="label label-default">&#8594;</span><span class="label label-default">&#8670;</span><span class="label label-default">&#8671;</span> explore</p>
-                <a href="//github.com/ehouais/js1k/blob/master/2015-Islands/plain.js">Source code on GitHub</a><br/>
-                <a href="http://js1k.com/2015-hypetrain/demo/2324">Entry on JS1K</a><br/>
-                Blog posts: <a href="http://ehouais.net/2015/03/js1k-2015-part-1-introduction/">part 1</a>, <a href="http://ehouais.net/2015/04/js1k-2015-part-2-buggy-island/">part 2</a><br/>
-            </div>
-            <div id="2014-Buggy_island" class="info">
-                <h3 class="panel-title" style="display: inline; margin-right: 20px"><img src="http://js1k.com/2014-dragons/img/js1k-dragons.gif" style="width: 40px; background-color: #fff"/>2014 - Buggy island - 1022 bytes</h3>
-                <p>Cheap/buggy/experimental 3D island rendering using recursive heightmap tessellation</p>
-                <p><span class="label label-default">Click</span> resume/pause</p>
-                <a href="//github.com/ehouais/js1k/blob/master/2014-Buggy_island/plain.js">Source code on GitHub</a><br/>
-                <a href="http://js1k.com/2014-dragons/demo/1966">Entry on JS1K</a><br/>
-                Blog posts: <a href="http://ehouais.net/2015/04/js1k-2015-part-2-buggy-island/">as part of 2015 postmortem</a><br/>
+            <div id="2012-Mine[love]craft" class="info">
+                <h3><img src="http://js1k.com/2012-love/img/js1k-love.png">2012 - Mine[love]craft - 1022 bytes - ranked #4</h3>
+                <p>Simplistic Minecraft-inspired sandboxing block game with cycling map, terrain generator, dynamic lighting, day/night alternance, terrain exploration and edition.</p>
+                <p>Control: <span class="control">Click</span> resume/pause, <span class="control">&#8592;</span><span class="control">&#8593;</span><span class="control">&#8595;</span><span class="control">&#8594;</span> move, <span class="control">&#8670;</span><span class="control">&#8671;</span> zoom/dezoom<br/><span class="control">Ctrl</span> rotate, <span class="control">Space</span> add block, <span class="control">C</span> remove block, <span class="control">B</span> lift block</p>
+                <p>Procedural generation: ad-hoc / rendering: <a href="https://en.wikipedia.org/wiki/Axonometric_projection">block-based dimetric projection</a></p>
+                <p>
+                    <a href="//rawgit.com/ehouais/js1k/gh-pages/shim.html?demo=2012-Mine%5Blove%5Dcraft">full screen</a> -
+                    <a href="http://js1k.com/1282">Entry on JS1K</a> -
+                    <a href="//github.com/ehouais/js1k/blob/master/2012-Mine%5Blove%5Dcraft/plain.js">Source code on GitHub</a> -
+                    Blog posts: <a href="http://ehouais.net/2012/03/js1k-2012-part-1-introduction/">1</a> / <a href="http://ehouais.net/2012/03/js1k-2012-part-2-terrain-generation-and-user-blocks/">2</a> / <a href="http://ehouais.net/2012/03/js1k-2012-part-3-time-colours-and-light/">3</a> / <a href="http://ehouais.net/2012/03/js1k-2012-part-4-optimization-and-conclusion/">4</a><br/>
+                </p>
+                <p>Known bug: if the sun/moon reflection reaches the bottom corner block, the sky color becomes buggy</p>
             </div>
             <div id="2013-Strange_crystals_II" class="info">
-                <h3 class="panel-title"><img src="http://js1k.com/2013-spring/img/js1k-spring.png" style="width: 40px; background-color: #fff"/>2013 - Strange Crystals II - 1017 bytes - rank #1</h3>
+                <h3><img src="http://js1k.com/2013-spring/img/js1k-spring.png"/>2013 - Strange Crystals II - 1017 bytes - ranked #1</h3>
                 <p>A minecart simulation, with neverending track, bends, slopes, stulls, caverns, bridges, stala(gm|ct)ites, (sometimes flickering) lightbulbs, and a glowing <a href="http://js1k.com/2013-spring/demo/1461">Furbee</a> to show you the way...</p>
-                <p><span class="label label-default">Click</span> resume/pause</p>
-                <br/>
-                <a href="//github.com/ehouais/js1k/blob/master/2013-Strange_crystals_II/plain.js">Source code on GitHub</a><br/>
-                <a href="http://js1k.com/2013-spring/demo/1555">Entry on JS1K</a> (<a href="http://js1k.com/2013-spring/demo/1459">first version</a> with strange crystals but without Furbee)<br/>
-                Blog posts: <a href="http://ehouais.net/2013/04/js1k-2013-part-1-introduction/">part 1</a>, <a href="http://ehouais.net/2013/04/js1k-2013-part-2-tunnel-generation/">part 2</a>, <a href="http://ehouais.net/2013/04/js1k-2013-part-3-rendering/">part 3</a>, <a href="http://ehouais.net/2013/05/js1k-2013-part-4-conclusion/">part 4</a><br/>
-                Suggested music: <a href="//youtu.be/huavJMGUbiI">Bronski beat - Smalltown boy (12" extended)</a>
+                <p>Control: <span class="control">click</span> resume/pause</p>
+                <p>Procedural generation: ad-hoc / rendering: <a href="https://en.wikipedia.org/wiki/2.5D#Scaling_along_the_Z_axis">Z-scaling</a></p>
+                <p>
+                    <a href="//rawgit.com/ehouais/js1k/gh-pages/shim.html?demo=2013-Strange_crystals_II">full screen</a> -
+                    <a href="http://js1k.com/1555">Entry on JS1K</a> -
+                    <a href="//github.com/ehouais/js1k/blob/master/2013-Strange_crystals_II/plain.js">code</a> (<a href="http://js1k.com/2013-spring/demo/1459">1st version</a>) -
+                    Blog posts: <a href="http://ehouais.net/2013/04/js1k-2013-part-1-introduction/">1</a> / <a href="http://ehouais.net/2013/04/js1k-2013-part-2-tunnel-generation/">2</a> / <a href="http://ehouais.net/2013/04/js1k-2013-part-3-rendering/">3</a> / <a href="http://ehouais.net/2013/05/js1k-2013-part-4-conclusion/">4</a> -
+                    <a href="http://www.tamats.com/blog/?p=431">3d party analysis</a>
+                </p>
+                <p>Known bug: there can sometimes be holes in the walls that let distant rendering elements show</p>
             </div>
-            <div id="2012-Mine[love]craft" class="info">
-                <h3 class="panel-title"><img src="http://js1k.com/2012-love/img/js1k-love.png" style="width: 40px; background-color: #fff"/>2012 - Mine[love]craft - 1022 bytes</h3>
-                <p>Simplistic Minecraft-inspired sandboxing block game with "Infinite" map (cycling in 4 directions), terrain generator, dynamic lighting, day/night alternance, terrain exploration and edition.</p>
-                <p><span class="label label-default">Click</span> resume/pause, <span class="label label-default">&#8592;</span><span class="label label-default">&#8593;</span><span class="label label-default">&#8595;</span><span class="label label-default">&#8594;</span> move, <span class="label label-default">&#8670;</span><span class="label label-default">&#8671;</span> zoom/dezoom<br/><span class="label label-default">Ctrl</span> rotate, <span class="label label-default">Space</span> add block, <span class="label label-default">C</span> remove block, <span class="label label-default">B</span> lift block</p>
-                <br/>
-                <a href="//github.com/ehouais/js1k/blob/master/2012-Mine%5Blove%5Dcraft/plain.js">Source code on GitHub</a><br/>
-                <a href="http://js1k.com/2012-love/demo/1282">Entry on JS1K</a><br/>
-                Blog posts: <a href="http://ehouais.net/2012/03/js1k-2012-part-1-introduction/">part 1</a>, <a href="http://ehouais.net/2012/03/js1k-2012-part-2-terrain-generation-and-user-blocks/">part 2</a>, <a href="http://ehouais.net/2012/03/js1k-2012-part-3-time-colours-and-light/">part 3</a>, <a href="http://ehouais.net/2012/03/js1k-2012-part-4-optimization-and-conclusion/">part 4</a><br/>
+            <div id="2014-Buggy_island" class="info">
+                <h3><img src="http://js1k.com/2014-dragons/img/js1k-dragons.gif"/>2014 - Buggy island - 1022 bytes - ranked #6</h3>
+                <p>Cheap/buggy/experimental 3D island rendering using recursive heightmap tessellation</p>
+                <p>Control: <span class="control">click</span> resume/pause</p>
+                <p>Procedural generation: <a href="https://en.wikipedia.org/wiki/Gosper_curve#Properties">Gosper</a> <a href="https://en.wikipedia.org/wiki/Heightmap">heightmap</a> / rendering: <a href="https://en.wikipedia.org/wiki/2.5D#Scaling_along_the_Z_axis">Z-scaled</a> horizontal <a href="https://en.wikipedia.org/wiki/Pin_Art">pinscreen</a></p>
+                <p>
+                    <a href="http://js1k.com/1966">Entry on JS1K</a> -
+                    <a href="//github.com/ehouais/js1k/blob/master/2014-Buggy_island/plain.js">Source code on GitHub</a> -
+                    Blog posts: <a href="http://ehouais.net/2015/04/js1k-2015-part-2-buggy-island">as part of 2015 postmortem</a>
+                </p>
+            </div>
+            <div id="2015-Islands" class="info">
+                <h3><img src="http://js1k.com/2015-hypetrain/img/js1k-hypetrain.png"/>2015 - Islands - 1018 bytes - ranked #5</h3>
+                <p>Random pseudo 3D island generation (water, sand, rocks, grass, citadel) and exploration</p>
+                <p>Control: <span class="control">&#8592;</span><span class="control">&#8593;</span><span class="control">&#8595;</span><span class="control">&#8594;</span><span class="control">&#8670;</span><span class="control">&#8671;</span> explore</p>
+                <p>Procedural generation: ad-hoc <a href="https://en.wikipedia.org/wiki/Quadtree">quadtree</a> <a href="https://en.wikipedia.org/wiki/Heightmap">heightmap</a> / rendering: <a href="https://en.wikipedia.org/wiki/2.5D#Scaling_along_the_Z_axis">Z-scaled</a> horizontal <a href="https://en.wikipedia.org/wiki/Pin_Art">pinscreen</a></p>
+                <p>
+                    <a href="http://js1k.com/2324">Entry on JS1K</a> -
+                    <a href="//github.com/ehouais/js1k/blob/master/2015-Islands/plain.js">Source code on GitHub</a> -
+                    Blog posts: <a href="http://ehouais.net/2015/03/js1k-2015-part-1-introduction/">1</a> / <a href="http://ehouais.net/2015/04/js1k-2015-part-2-buggy-island/">2</a>
+                </p>
+            </div>
+            <div id="2016-Gliese_581_c" class="info">
+                <h3><img src="http://js1k.com/2016-elemental/img/js1k-elemental.png"/>2016 - Gliese 581 c - 1019 bytes - ranked #6</h3>
+                <p>Ground level flyby of an inhospitable planet. 3 biomes, heading control, auto altitude</p>
+                <p>Control: <span class="control">&#8592;</span><span class="control">&#8594;</span> heading</p>
+                <p>Procedural generation: <a href="https://en.wikipedia.org/wiki/Inverse_distance_weighting">inverse-distance weighting interpolated</a> <a href="https://en.wikipedia.org/wiki/Heightmap">heightmap</a> / rendering: interpolated raycasting</p>
+                <p>
+                    <a href="http://js1k.com/2604">Entry on JS1K</a> -
+                    <a href="//github.com/ehouais/js1k/blob/master/2016-Gliese_581_c/plain.js">Source code on GitHub</a> -
+                    Blog posts:
+                </p>
+                <p>Known bug: will crash if steering too much on left or right</p>
             </div>
         </div>
         <script>
+            var demo = document.getElementById('demo');
+
             document.getElementById('thumbs').addEventListener('click', function(event) {
                 if (event.target.tagName === 'IMG') {
                     var id = event.target.parentNode.getAttribute('href').substr(1);
-                    document.getElementById('demo').setAttribute('src', '//rawgit.com/ehouais/js1k/gh-pages/shim.html?demo='+id);
+                    demo.setAttribute('src', '//rawgit.com/ehouais/js1k/gh-pages/shim.html?demo='+id);
+                    demo.focus();
                     Array.prototype.slice.call(document.getElementsByClassName('info')).forEach(function(node) {
                         node.style.display = 'none';
                     });
