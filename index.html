@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>@ehouais' blog</title>
         <meta charset="utf-8">
         <script src="//cdnjs.cloudflare.com/ajax/libs/markdown-it/7.0.0/markdown-it.js"></script>
         <style>
@@ -132,7 +133,10 @@
                     http(url.protocol+'//'+url.host+'/posts'+path+'.md', function(xhr) {
                         if (xhr.status == 200) {
                             var link = document.querySelector('#navigation a[href="'+path+'"]');
-                            link && link.removeAttribute('href');
+                            if (link) {
+                                link.removeAttribute('href');
+                                document.title += ': '+link.textContent;
+                            }
                             document.getElementById('content').innerHTML = markdownit({html: true}).render(xhr.responseText);
                         } else {
                             window.location.replace(url.protocol+'//'+url.host+'/home');
