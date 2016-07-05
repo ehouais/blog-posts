@@ -33,9 +33,10 @@
             #navigation  {
                 position: fixed;
                 top: 10px;
-                width: 330px;
-                text-align: right;
-                padding: 10px;
+                width: 200px;
+                text-align: center;
+                margin-top: 10px;
+                margin-left: 140px;
             }
             #navigation a {
                 display: block;
@@ -43,8 +44,24 @@
             #navigation a:not([href]) {
                 color: #000;
             }
+            #navigation_ a:not([href]):before {
+                content: '▶';
+                font-size: 20px;
+                top: 2px;
+                position: relative;
+                line-height: 0px;
+            }
+            #navigation a:not([href]) {
+                background-color: #469;
+                color: #fff;
+            }
             #navigation section {
                 margin-top: 20px;
+            }
+            #navigation ul {
+                list-style-type: none;
+                margin-top: 0;
+                padding-left: 0;
             }
             #content {
                 background-color: #fff;
@@ -77,8 +94,8 @@
                 left: 550px;
                 border-radius: 6px;
                 border: 2px solid #fff;
-                background-color: #fff;
                 box-shadow: 0 0 6px 0 #aaa;
+                background-color: #fff;
             }
             #content iframe.demo {
                 border: 1px solid #ddd;
@@ -95,18 +112,36 @@
     </head>
     <body>
         <div id="navigation">
-            <a href="/home">home</a>
             <section>
-                <a href="/2015/04/js1k-2015-part-2-buggy-island">JS1k 2015 (part 2) : Buggy island</a>
-                <a href="/2015/03/js1k-2015-part-1-introduction">JS1k 2015 (part 1) : Introduction</a>
-                <a href="/2013/05/js1k-2013-part-4-conclusion">JS1k 2013 (part 4) : Conclusion</a>
-                <a href="/2013/04/js1k-2013-part-3-rendering">JS1k 2013 (part 3) : Rendering</a>
-                <a href="/2013/04/js1k-2013-part-2-tunnel-generation">JS1k 2013 (part 2) : Tunnel generation</a>
-                <a href="/2013/04/js1k-2013-part-1-introduction">JS1k 2013 (part 1) : Introduction</a>
-                <a href="/2012/03/js1k-2012-part-4-optimization-and-conclusion">JS1k 2012 (part 4) : Optimization & conclusion</a>
-                <a href="/2012/03/js1k-2012-part-3-time-colours-and-light">JS1k 2012 (part 3) : Time, colours & light</a>
-                <a href="/2012/03/js1k-2012-part-2-terrain-generation">JS1k 2012 (part 2) : Terrain generation</a>
-                <a href="/2012/03/js1k-2012-part-1-introduction">JS1k 2012 (part 1) : Introduction</a>
+                <a href="/home">home</a>
+            </section>
+            <section>
+                <a href="/2016/07/js1k-2012-2016-retrospective">JS1k 2012-2016 retrospective</a>
+            </section>
+            <section>
+                JS1k 2012
+                <ul>
+                    <li><a href="/2012/03/js1k-2012-part-1-introduction">Introduction</a></li>
+                    <li><a href="/2012/03/js1k-2012-part-2-terrain-generation">Terrain generation</a></li>
+                    <li><a href="/2012/03/js1k-2012-part-3-time-colours-and-light">Time, colours &amp; light</a></li>
+                    <li><a href="/2012/03/js1k-2012-part-4-optimization-and-conclusion">Optimization &amp; conclusion</a></li>
+                </ul>
+            </section>
+            <section>
+                JS1k 2013
+                <ul>
+                    <li><a href="/2013/04/js1k-2013-part-1-introduction">Introduction</a></li>
+                    <li><a href="/2013/04/js1k-2013-part-2-tunnel-generation">Tunnel generation</a></li>
+                    <li><a href="/2013/04/js1k-2013-part-3-rendering">Rendering</a></li>
+                    <li><a href="/2013/05/js1k-2013-part-4-conclusion">Conclusion</a></li>
+                </ul>
+            </section>
+            <section>
+                JS1k 2015
+                <ul>
+                    <li><a href="/2015/04/js1k-2015-part-2-buggy-island">Buggy island</a></li>
+                    <li><a href="/2015/03/js1k-2015-part-1-introduction">Introduction</a></li>
+                </ul>
             </section>
         </div>
         <div id="content"></div>
