@@ -32,35 +32,63 @@
             }
             #navigation  {
                 position: fixed;
-                top: 10px;
-                width: 200px;
-                text-align: center;
-                margin-top: 10px;
-                margin-left: 140px;
+                text-align: right;
+                width: 240px;
+                font-size: 13px;
+                white-space: nowrap;
             }
             #navigation a:not([href]) {
-                background-color: #469;
-                color: #fff;
-                padding: 0 4px;
-                border-radius: 4px;
+                color: #000;
+            }
+            #navigation a:not([href]):before {
+                content: '➤';
+                line-height: 15px;
             }
             #navigation section {
-                margin-top: 20px;
+                padding-top: 10px;
             }
             #navigation ul {
                 list-style-type: none;
-                margin-top: 0;
+                margin: 0 auto;
                 padding-left: 0;
             }
             #content {
+                position: relative;
                 background-color: #fff;
                 width: 500px;
-                margin-left: 350px;
+                margin-left: 250px;
                 margin-top: 10px;
                 margin-bottom: 50px;
                 padding: 30px;
                 box-shadow: 0 0 6px 0 #aaa;
-                min-height: 500px;
+                min-height: 400px;
+            }
+            #content .series {
+                text-align: center;
+                font-size: 14px;
+            }
+            #content .title {
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            #content .pubdate, #content .lastmodifdate {
+                position: absolute;
+                font-size: 12px;
+                bottom: -18px;
+                margin: 0 5px;
+            }
+            #content .pubdate {
+                right: 50%;
+            }
+            #content .lastmodifdate {
+                left: 50%;
+            }
+            #content .pubdate:before {
+                content: 'published: ';
+            }
+            #content .lastmodifdate:before {
+                content: 'last modified: ';
             }
             #content h1 {
                 text-align: center;
@@ -70,18 +98,15 @@
                 text-align: center;
                 margin: 40px auto;
             }
-            #content section {
-                position: relative;
-                margin-bottom: 30px;
+            #content p {
+                margin-top: 30px;
                 text-align: justify;
-            }
-            #content section >p {
                 text-indent: 1em;
             }
             #content img {
                 position: absolute;
                 max-height: 80px;
-                left: 550px;
+                left: 570px;
                 border-radius: 6px;
                 border: 2px solid #fff;
                 box-shadow: 0 0 6px 0 #aaa;
@@ -106,9 +131,6 @@
                 <a href="/home">home</a>
             </section>
             <section>
-                <a href="/2016/07/js1k-2012-2016-retrospective">JS1k 2012-2016 retrospective</a>
-            </section>
-            <section>
                 JS1k 2012
                 <ul>
                     <li><a href="/2012/03/js1k-2012-part-1-introduction">Introduction</a></li>
@@ -129,8 +151,8 @@
             <section>
                 JS1k 2015
                 <ul>
-                    <li><a href="/2015/04/js1k-2015-part-2-buggy-island">Buggy island</a></li>
                     <li><a href="/2015/03/js1k-2015-part-1-introduction">Introduction</a></li>
+                    <li><a href="/2015/04/js1k-2015-part-2-buggy-island">Buggy island</a></li>
                 </ul>
             </section>
         </div>
