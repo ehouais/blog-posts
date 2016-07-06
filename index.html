@@ -32,20 +32,20 @@
             }
             #navigation  {
                 position: fixed;
-                text-align: center;
-                margin-left: 180px;
+                text-align: right;
+                width: 340px;
                 font-size: 13px;
                 white-space: nowrap;
             }
             #navigation a:not([href]) {
-                background-color: #469;
-                color: #fff;
-                padding: 0 4px;
-                border-radius: 4px;
+                color: #000;
+            }
+            #navigation a:not([href]):before {
+                content: '➤';
+                line-height: 15px;
             }
             #navigation section {
-                border-top: 1px solid #aaa;
-                padding: 3px 10px;
+                padding-top: 10px;
             }
             #navigation ul {
                 list-style-type: none;
@@ -106,9 +106,6 @@
                 <a href="/home">home</a>
             </section>
             <section>
-                <a href="/2016/07/js1k-2012-2016-retrospective">JS1k 2012-2016 retrospective</a>
-            </section>
-            <section>
                 JS1k 2012
                 <ul>
                     <li><a href="/2012/03/js1k-2012-part-1-introduction">Introduction</a></li>
@@ -129,8 +126,8 @@
             <section>
                 JS1k 2015
                 <ul>
-                    <li><a href="/2015/04/js1k-2015-part-2-buggy-island">Buggy island</a></li>
                     <li><a href="/2015/03/js1k-2015-part-1-introduction">Introduction</a></li>
+                    <li><a href="/2015/04/js1k-2015-part-2-buggy-island">Buggy island</a></li>
                 </ul>
             </section>
         </div>
