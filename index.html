@@ -33,7 +33,7 @@
             #navigation  {
                 position: fixed;
                 text-align: right;
-                width: 340px;
+                width: 240px;
                 font-size: 13px;
                 white-space: nowrap;
             }
@@ -53,14 +53,42 @@
                 padding-left: 0;
             }
             #content {
+                position: relative;
                 background-color: #fff;
                 width: 500px;
-                margin-left: 350px;
+                margin-left: 250px;
                 margin-top: 10px;
                 margin-bottom: 50px;
                 padding: 30px;
                 box-shadow: 0 0 6px 0 #aaa;
-                min-height: 500px;
+                min-height: 400px;
+            }
+            #content .series {
+                text-align: center;
+                font-size: 14px;
+            }
+            #content .title {
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            #content .pubdate, #content .lastmodifdate {
+                position: absolute;
+                font-size: 12px;
+                bottom: -18px;
+                margin: 0 5px;
+            }
+            #content .pubdate {
+                right: 50%;
+            }
+            #content .lastmodifdate {
+                left: 50%;
+            }
+            #content .pubdate:before {
+                content: 'published: ';
+            }
+            #content .lastmodifdate:before {
+                content: 'last modified: ';
             }
             #content h1 {
                 text-align: center;
@@ -70,18 +98,15 @@
                 text-align: center;
                 margin: 40px auto;
             }
-            #content section {
-                position: relative;
-                margin-bottom: 30px;
+            #content p {
+                margin-top: 30px;
                 text-align: justify;
-            }
-            #content section >p {
                 text-indent: 1em;
             }
             #content img {
                 position: absolute;
                 max-height: 80px;
-                left: 550px;
+                left: 570px;
                 border-radius: 6px;
                 border: 2px solid #fff;
                 box-shadow: 0 0 6px 0 #aaa;
