@@ -1,4 +1,7 @@
-# Tiny heightmap generation algorithms introduction
+<div class="series">Tiny heightmap generation algorithms - 1</div>
+<div class="title">introduction</div>
+<div class="pubdate">2016-07-06</div>
+<div class="lastmodifdate">2016-07-06</div>
 
 ## Constraints
 
