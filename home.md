@@ -1,6 +1,8 @@
-# Philippe Deschaseaux [@ehouais](https://twitter.com/ehouais "@ehouais")
+<div class="title">Philippe Deschaseaux <a href="//twitter.com/ehouais">@ehouais</a></div>
 
-![@ehouais](http://www.gravatar.com/avatar/0b474c3d59aab43cb70d106f56095cbb)
+<a class="illustration" href="//twitter.com/ehouais">
+    <img src="//www.gravatar.com/avatar/0b474c3d59aab43cb70d106f56095cbb" title="Ceci n'est pas @ehouais"/>
+</a>
 
 I'm a senior dev from Brittany, France, with interests in algorithms, web graphics, REST architecture, and advanced programming concepts in general.
 
@@ -18,4 +20,4 @@ SPAs + REST resources are fun to combine, but as the application logic grows, yo
 
 ## PHP REST key-value server
 
-A REST key/value server with CORS+digestAuth+simple cache management, implemented as a static PHP class. The abstract ancestor class can be used for other types of servers. A simple single-page client application is provided. [project on github](https://github.com/ehouais/PHP-servers "github")
+A REST key/value server with CORS+digestAuth+simple cache management, implemented as a static PHP class. The abstract ancestor class can be used for other types of servers. A simple single-page client application is provided. [project on github](//github.com/ehouais/PHP-servers "github")
