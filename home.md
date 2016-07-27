@@ -21,6 +21,6 @@ Where simple application-logic/data-access decoupling meets embeddable data visu
 
 SPAs + REST resources are fun to combine, but as the application logic grows, you need dedicated programming concepts to keep your code base under control.
 
-## PHP REST key-value server
+## PHP REST key/value server
 
 A REST key/value server with CORS+digestAuth+simple cache management, implemented as a static PHP class. The abstract ancestor class can be used for other types of servers. A simple single-page client application is provided. [project on github](//github.com/ehouais/PHP-servers "github")
