@@ -1,5 +1,7 @@
 [Home](/home)
 
+[JS1k 2012-2016 retrospective](/2016/07/js1k-2012-2016-retrospective)
+
 JS1k 2012
   1. [Introduction](/2012/03/js1k-2012-part-1-introduction)
   2. [Terrain generation](/2012/03/js1k-2012-part-2-terrain-generation)
