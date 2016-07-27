@@ -15,3 +15,9 @@ JS1k 2013
 JS1k 2015
   1. [Introduction](/2015/03/js1k-2015-part-1-introduction)
   2. [Buggy island](/2015/04/js1k-2015-part-2-buggy-island)
+
+Tiny heightmap<br/>generation algorithms
+  1. [Introduction](/2016/07/tiny-terrain-generation-algorithms-1-introduction)
+  2. [Pouring](/2016/07/tiny-terrain-generation-algorithms-2-pouring)
+  3. [Gosper island](/2016/07/tiny-terrain-generation-algorithms-3-gosper-island)
+  4. [IDW interpolation](/2016/07/tiny-terrain-generation-algorithms-4-idw-interpolation)
