@@ -1,7 +1,7 @@
 <div class="title">Philippe Deschaseaux <a href="//twitter.com/ehouais">@ehouais</a></div>
 
 <a class="illustration" href="//twitter.com/ehouais">
-    <img src="//www.gravatar.com/avatar/0b474c3d59aab43cb70d106f56095cbb" title="Ceci n'est pas @ehouais"/>
+    <img src="/cdn/img/ehouais.jpg" title="Ceci n'est pas @ehouais"/>
 </a>
 
 I'm a senior dev from Brittany, France, with interests in algorithms, web graphics, REST architecture, and advanced programming concepts in general.
