@@ -4,13 +4,13 @@
 <div class="lastmodifdate">2016-07-06</div>
 
 <a class="illustration" href="//en.wikipedia.org/wiki/Tessellation">
-    <img src="//ehouais.net/blog/wp-content/uploads/2015/04/tessellation.jpg" title="Tessellation"/>
+    <img src="/cdn/img/tessellation.jpg" title="Tessellation"/>
 </a>
 
 In [the previous post](/2015/03/js1k-2015-part-1-introduction "js1k 2015 (part 1) : introduction"), I explained that my 2014 and 2015 demos were exploring the same rendering method, which basically is a simple combination of heightmap, vertical [voxels](//en.wikipedia.org/wiki/Voxel "voxel"), and standard perspective calculations. The way you perform heightmap [tessellation](//en.wikipedia.org/wiki/Tessellation "Tessellation") (chunking the surface into contiguous small parts) can bring bonus features, such as simple z-index compliance if you can easily bind traversal order and distance to viewer, and variable LOD if you can handle multiple tessellations with different degree of precision. One elegant (and compact) way to achieve both these goals is to use recursive tessellation, in which the surface is recursively divided into smaller parts, using a unique geometric formula.
 
 <a class="illustration" href="//en.wikipedia.org/wiki/Gosper_curve#Properties">
-    <img src="//ehouais.net/blog/wp-content/uploads/2015/04/gosper.png" title="Gosper island"/>
+    <img src="/cdn/img/gosper-island.png" title="Gosper island"/>
 </a>
 
 When preparing my 2014 entry, I knew the canonical recursive tessellation scheme used in computer graphics was the well-known [quadtree](//en.wikipedia.org/wiki/Quadtree "Quadtree"), but I wanted something more exotic for my use. What if each node didn't transform into 4 subnodes, but 7, one at the center, and the 6 others spread evenly around it ? Sure the surface of the juxtaposed subnodes isn't the same as the parent's (hexagons are not [rep-tiles](//en.wikipedia.org/wiki/Rep-tile "Rep-tile")), but if you find [the correct geometric transformation](//ecademy.agnesscott.edu/~lriddle/ifs/ksnow/flowsnake.htm "A bit of maths..."), all the nodes at a particular depth are perfectly contiguous. Turns out the resulting shape is well known to mathematicians under the name of "[Gosper island](//en.wikipedia.org/wiki/Gosper_curve#Properties "Gosper island")". This island is fractal by construction, which means that, even if its surface is finite, you'd better have good shoes and some [lembas](//en.wikipedia.org/wiki/List_of_Middle-earth_food_and_drink#Lembas "Lembas") if you intend to walk the coastal path (math nerd joke).
@@ -26,7 +26,7 @@ But it also has a few intrinsic drawbacks:
 - The generation and traversal of 7 subnodes are a bit more complex to code and compress than their quadtree equivalent
 
 <a class="illustration" href="//js1k.com/1966">
-    <img src="//ehouais.net/blog/wp-content/uploads/2015/03/buggy1.png" title="Buggy island"/>
+    <img src="/cdn/img/buggy-island.png" title="Buggy island"/>
 </a>
 
 Given the inherent problems and the lack of time, I struggled to put up a decent entry, but finally released "[Buggy island](//js1k.com/1966 "Buggy island")" with the following additions:
