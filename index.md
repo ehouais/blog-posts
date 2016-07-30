@@ -18,3 +18,6 @@ JS1k 2015
 
 Tiny pseudo 3D<br/>rendering engines
   1. [Introduction](/2016/07/tiny-pseudo-3d-rendering-engines-1-introduction)
+  2. [Z-axis scaling](/2016/07/tiny-pseudo-3d-rendering-engines-2-z-axis-scaling)
+  3. ["Pinart" rendering](/2016/07/tiny-pseudo-3d-rendering-engines-3-pinart-rendering)
+  4. [Interpolated raycasting](/2016/07/tiny-pseudo-3d-rendering-engines-4-interpolated-raycasting)
