@@ -2,7 +2,7 @@
 <div class="pubdate">2016-07-06</div>
 <div class="lastmodifdate">2016-07-06</div>
 
-The JS1k ([js1k.com](http://js1k.com) / [@js1k](http://twitter.com/js1k)) is a contest that suits me perfectly: I love javascript, I love algorithm optimization, it gives you a full year to prepare your entry, the theme is only optional, and the 1K limit is constraining enough while allowing some really impressive productions. My entries are always about creating consistent little universes, with focus on realistic rendering, animation and control (when possible).
+The JS1k ([js1k.com](http://js1k.com)/[@js1k](http://twitter.com/js1k)) coding contest suits me perfectly: I love javascript, I love algorithm optimization, it gives you a full year to prepare your entry, the theme is only optional, and the 1K limit is constraining enough while allowing some really impressive productions. My entries are always about creating consistent little universes, with focus on realistic rendering, animation and control (when possible).
 
 Based on my 5 years experience, my compression protips for JS1k newcomers would be:
 - You HAVE to know and use [Javascript operators precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
