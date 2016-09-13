@@ -1,10 +1,8 @@
-<div class="title">Philippe Deschaseaux <a href="//twitter.com/ehouais">@ehouais</a></div>
-
 <a class="illustration" href="//twitter.com/ehouais">
     <img src="/cdn/img/ehouais.jpg" title="Ceci n'est pas @ehouais"/>
 </a>
 
-I'm a senior dev from Brittany, France, with interests in algorithms, web graphics, REST architecture, and advanced programming concepts in general.
+I'm <a href="//twitter.com/ehouais">Philippe Deschaseaux</a>, a senior dev from Brittany, France, with interests in algorithms, web graphics, REST architecture, and advanced programming concepts in general.
 
 ## JS1k and 2.5D graphics experiments
 
