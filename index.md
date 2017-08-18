@@ -17,3 +17,10 @@ JS1k 2012
   4. [Optimization &amp; conclusion](/2012/03/js1k-2012-part-4-optimization-and-conclusion)
 
 [Hello, world !](/2012/03/hello-world)
+
+Standalone JS1k demos
+  1. [Mine[love]craft](/pages/js1k/2012-Mine[love]craft)
+  2. [Strange crystals II](/pages/js1k/2013-Strange_crystals_II)
+  3. [Buggy island](/pages/js1k/2014-Buggy_island)
+  4. [Islands](/pages/js1k/2015-Islands)
+  5. [Gliese 581 c](/pages/js1k/2016-Gliese_581_c)
