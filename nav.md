@@ -1,4 +1,4 @@
-[Home](/index)
+[Home](/)
 
 JS1k 2015
   1. [Introduction](/2015/03/js1k-2015-part-1-introduction)
